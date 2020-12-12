@@ -101,3 +101,28 @@ main {
   font-weight: 700;
   text-shadow: 3px 3px rgba(0, 0, 0, 0.3);
 }
+
+.about-btn {
+  background-color: #177792;
+  width: 40%;
+  height: 4vh;
+  color: white;
+
+  border-style: none;
+
+  align-items: center;
+  margin-left: 30%;
+  margin-top: 7vh;
+
+  border-radius: 2vh;
+}
+
+.about {
+  margin-top: 4px;
+  padding: 5px;
+  text-align: center;
+  background-color: rgba(83, 131, 153, 0.438);
+  color: white;
+  border-radius: 1vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}

@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './App.css'; 
 import React, { useState } from 'react'
- 
+
 
 const api = {
   key: "d34ccb77d87c6379d872c08e8d64c1c0",
@@ -11,6 +10,8 @@ const api = {
 function App() {
   const [query, setquery] = useState('');
   const [weather, setweather] = useState({});
+
+  const [showAbout, setshowAbout] = useState(false);
 
   const fetchSearch = evt => {
     if (evt.key === "Enter") {
@@ -36,6 +37,11 @@ function App() {
     let year = d.getFullYear();
   
     return `${day} ${date} ${month} ${year}`;
+  }
+
+  
+  const handlerShowAbout = () => {
+    setshowAbout(!showAbout);
   }
 
   return (
@@ -76,15 +82,29 @@ function App() {
                 {weather.weather[0].main}
               </div>
             </div>
-          </div>
+            <button className="about-btn" onClick={handlerShowAbout} >About</button>
+            
+            {showAbout?
+              <div className="about">
+                <p>nicomach99@gmail.com
+                </p>
+                <p>
+                  GitHub: nicomach99
+                </p>
+              </div>:<div></div>
+          }
+               </div>
 
         ) : (
           <div>Search a place, please ;)</div>
 
         ) }
 
-
       </main>
+
+        
+      
+      
     </div>
     
   );
